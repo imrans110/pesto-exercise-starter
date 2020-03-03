@@ -20,5 +20,10 @@
     "node-cmd": "^3.0.0",
     "node-fetch": "^2.6.0",
     "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "jest-cli": "^25.1.0"
   }
 }
