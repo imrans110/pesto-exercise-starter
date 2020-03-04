@@ -10,8 +10,12 @@ then it should return the cached result and not invoke `cb` again.
 # Requirements
 
 ### **What are some good real-life use cases for such a function?**
-*Write your response here*
 
-### **What *extra* test cases can you add to the test file?**
+_Write your response here_
 
-*Add relevant test-cases in the test file*
+1. Function which has to be called many times during application cycle.
+2. React actually has an inherent way of doing it for its components called React.memo.
+
+### **What _extra_ test cases can you add to the test file?**
+
+_Add relevant test-cases in the test file_
