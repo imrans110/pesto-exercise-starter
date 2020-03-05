@@ -1,8 +1,6 @@
+const curry = (fn, ...args) =>
+  fn.length <= args.length
+    ? fn(...args)
+    : (...more) => curry(fn, ...args, ...more);
 
-function curry(){
-  
-}
-
-export {
-  curry,
-};
+export { curry };
