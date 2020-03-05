@@ -6,8 +6,6 @@ const map = (arr, fn) => {
   return mapArray;
 };
 
-const arr = [1, 2, 3, 4];
-
 const filter = (arr, fn) => {
   const filteredArray = [];
   for (let index = 0; index < arr.length; index++) {
