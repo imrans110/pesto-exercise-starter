@@ -6,6 +6,11 @@ Please read through the instructions carefully.
 - Please ensure that you have these or later version of `node` and `npm`.
     - `node` >= `12.11.0`
     - `npm` >= `6.11.3`
+- If you are using Unix-based system
+    - use latest version of `bash` or `zsh` terminals.
+- If you are windows
+    - use [`Git bash`](https://gitforwindows.org/). 
+    - **The VSCode internal terminal may not work properly. So use Git Bash where ever possible.**
 - It is recommended that you use `nvm` to manage node versions.
 - We recommend that you use [VSCode](https://code.visualstudio.com/) with these extensions installed/enabled.
     - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
@@ -24,7 +29,8 @@ Please read through the instructions carefully.
     4. Solve the question
     5. Commit the files
     6. Push to **your** repo
-    7. Create a pull request on your repo from the above branch to master
+    7. Create a pull request on your repo from the above branch to master.
+        - **DO NOT MERGE THE PR**
 
 
 ## Adding `.env` file
