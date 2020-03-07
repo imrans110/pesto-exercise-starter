@@ -7,7 +7,10 @@ function rot13(encodedString) {
 
   for (let char of encodedString) {
     const charASCIIValue = char.charCodeAt(0);
-    if (charASCIIValue >= 65 && charASCIIValue < 91) {
+    if (
+      charASCIIValue >= LOWER_BOUND_CHAR_ASCII &&
+      charASCIIValue < UPPER_BOUND_CHAR_ASCII + 1
+    ) {
       if (charASCIIValue + ROT_13_VALUE > UPPER_BOUND_CHAR_ASCII) {
         const ASCIIValueDifference =
           UPPER_BOUND_CHAR_ASCII - charASCIIValue + 1;
