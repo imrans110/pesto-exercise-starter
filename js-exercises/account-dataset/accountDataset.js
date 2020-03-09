@@ -41,6 +41,8 @@ function sumOfInterests() {
 
 function higherStateSums() {
   const stateAggregatAmounts = {};
+  const MINIMUM_AMOUNT = 1000000;
+
   for (let account of bankBalances) {
     if (stateAggregatAmounts[account.state]) {
       stateAggregatAmounts[account.state] += parseFloat(account.amount);
@@ -48,9 +50,10 @@ function higherStateSums() {
       stateAggregatAmounts[account.state] = parseFloat(account.amount);
     }
   }
+
   const sumAmount = Object.keys(stateAggregatAmounts).reduce(
     (accumulatedAmount, state) => {
-      if (stateAggregatAmounts[state] > 1000000) {
+      if (stateAggregatAmounts[state] > MINIMUM_AMOUNT) {
         accumulatedAmount += stateAggregatAmounts[state];
         return accumulatedAmount;
       }
