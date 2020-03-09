@@ -47,21 +47,21 @@ function sumOfInterests() {
 }
 
 function higherStateSums() {
-  const stateAggregatAmounts = {};
+  const stateAggregatedAmounts = {};
   const MINIMUM_AMOUNT = 1000000;
 
   for (let account of bankBalances) {
-    if (stateAggregatAmounts[account.state]) {
-      stateAggregatAmounts[account.state] += parseFloat(account.amount);
+    if (stateAggregatedAmounts[account.state]) {
+      stateAggregatedAmounts[account.state] += parseFloat(account.amount);
     } else {
-      stateAggregatAmounts[account.state] = parseFloat(account.amount);
+      stateAggregatedAmounts[account.state] = parseFloat(account.amount);
     }
   }
 
-  const sumAmount = Object.keys(stateAggregatAmounts).reduce(
+  const sumAmount = Object.keys(stateAggregatedAmounts).reduce(
     (accumulatedAmount, state) => {
-      if (stateAggregatAmounts[state] > MINIMUM_AMOUNT) {
-        accumulatedAmount += stateAggregatAmounts[state];
+      if (stateAggregatedAmounts[state] > MINIMUM_AMOUNT) {
+        accumulatedAmount += stateAggregatedAmounts[state];
         return accumulatedAmount;
       }
       return accumulatedAmount;
