@@ -27,16 +27,23 @@ function sumOfBankBalances() {
   return parseFloat(unRoundedSum.toFixed(2));
 }
 
+function roundDecimalValue(value) {
+  return Math.round(value * 100) / 100;
+}
+
 function sumOfInterests() {
   const SELECTED_STATES = ["WI", "IL", "WY", "OH", "GA", "DE"];
   const INTEREST_MULTIPLIER = 0.189;
   let unRoundedInterest = bankBalances.reduce((accumulator, nextAccount) => {
     if (SELECTED_STATES.includes(nextAccount.state)) {
-      return accumulator + nextAccount.amount * INTEREST_MULTIPLIER;
+      return (
+        roundDecimalValue(accumulator) +
+        roundDecimalValue(nextAccount.amount) * INTEREST_MULTIPLIER
+      );
     }
     return accumulator;
   }, 0.0);
-  return unRoundedInterest;
+  return roundDecimalValue(unRoundedInterest);
 }
 
 function higherStateSums() {
