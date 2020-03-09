@@ -1,9 +1,9 @@
 const createDeepCopy = objToCopy => {
-  const deepCopy, v, key;
+  let deepCopy, value, key;
   deepCopy = Array.isArray(objToCopy) ? [] : {};
   for (key in objToCopy) {
-      value = objToCopy[key];
-      deepCopy[key] = (typeof value === "object") ? createDeepCopy(value) : value;
+    value = objToCopy[key];
+    deepCopy[key] = typeof value === "object" ? createDeepCopy(value) : value;
   }
   return deepCopy;
 };

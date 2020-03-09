@@ -4,7 +4,9 @@ const animalSort = animals => {
 
 function compareAnimal(animal, nextAnimal) {
   if (animal.numberOfLegs === nextAnimal.numberOfLegs) {
-    if (animal.name > nextAnimal.name) {
+    const animalName = animal.name.toLowerCase();
+    const nextAnimalName = nextAnimal.name.toLowerCase();
+    if (animalName > nextAnimalName) {
       return 1;
     }
     return -1;
